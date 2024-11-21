@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HasoniTranslate</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.0.0-beta.3/dist/tesseract.min.js"></script>
+</head>
+<body>
+    <!-- زر الرجوع إلى الصفحة الرئيسية -->
+    <button id="back-btn" class="back-btn">
+        <i class="fas fa-arrow-left"></i>
+    </button>
+
+    <!-- مقدمة عند الدخول -->
+    <div id="intro">
+        <h1>مرحبًا بك في hasoniTranslate!</h1>
+        <p>مترجم الكلمات والجمل باستخدام الصوت والنصوص</p>
+        <p id="welcome-message">Welcome in HasoniTranslate</p>
+        <button id="start-btn">ابدأ الترجمة</button>
+        
+        <!-- روابط وسائل التواصل -->
+        <div id="social-links">
+            <a href="https://t.me/sov7Tate" target="_blank" class="social-link">
+                <i class="fab fa-telegram"></i> قناة التلجرام
+            </a>
+            <a href="https://www.facebook.com/share/1JTgsTRZYj/" target="_blank" class="social-link">
+                <i class="fab fa-facebook"></i> صفحتي على الفيسبوك
+            </a>
+        </div>
+    </div>
+
+    <!-- واجهة المستخدم الرئيسية بعد الضغط على الزر "ابدأ الترجمة" -->
+    <div class="container" id="translate-container" style="display:none;">
+        <h1>Welcome in HasoniTranslate</h1>
+        
+        <!-- حقل لإدخال النص بتصميم جديد -->
+        <div class="input-box">
+            <textarea id="input-text" placeholder="أدخل النص هنا..." rows="5"></textarea>
+        </div>
+        
+        <!-- حقل لاختيار اللغة المصدر -->
+        <div class="input-group">
+            <select id="source-lang">
+                <option value="en">الإنجليزية</option>
+                <option value="ar">العربية</option>
+                <option value="fr">الفرنسية</option>
+                <option value="zh">الصينية</option>
+                <option value="ru">الروسية</option>
+                <option value="de">الألمانية</option>
+                <option value="es">الإسبانية</option>
+                <option value="fa">الفارسية</option>
+                <option value="tr">التركية</option>
+                <option value="ja">اليابانية</option>
+                <option value="ko">الكورية</option>
+                <option value="it">الإيطالية</option>
+                <option value="tl">الفلبينية</option>
+                <option value="uk">الأوكرانية</option>
+                <option value="th">التايلندية</option>
+                <option value="zh-TW">الصينية المبسطة</option>
+                <option value="pt">البرتغالية</option>
+                <option value="el">اليونانية</option>
+            </select>
+            <span class="to-text">إلى</span>
+            <select id="target-lang">
+                <option value="ar">العربية</option>
+                <option value="en">الإنجليزية</option>
+                <option value="fr">الفرنسية</option>
+                <option value="zh">الصينية</option>
+                <option value="ru">الروسية</option>
+                <option value="de">الألمانية</option>
+                <option value="es">الإسبانية</option>
+                <option value="fa">الفارسية</option>
+                <option value="tr">التركية</option>
+                <option value="ja">اليابانية</option>
+                <option value="ko">الكورية</option>
+                <option value="it">الإيطالية</option>
+                <option value="tl">الفلبينية</option>
+                <option value="uk">الأوكرانية</option>
+                <option value="th">التايلندية</option>
+                <option value="zh-TW">الصينية المبسطة</option>
+                <option value="pt">البرتغالية</option>
+                <option value="el">اليونانية</option>
+            </select>
+        </div>
+
+        <!-- مسافة فاصلة بين عناصر اللغة و الأزرار -->
+        <div class="spacer"></div>
+        
+        <!-- زر الترجمة مع تغيير النص إلى "اضغط هنا للترجمة" -->
+        <button id="translate-button">اضغط هنا للترجمة</button>
+        
+        <!-- زر المايك للتحدث -->
+        <button id="mic-button">🎤 استخدم المايك</button>
+
+        <!-- زر الكاميرا لالتقاط صورة -->
+        <button id="camera-button">📷 التقط صورة من الكاميرا</button>
+        
+        <!-- عرض الترجمة في مربع خاص واحترافي -->
+        <div id="result">
+            <h2>الترجمة:</h2>
+            <div id="translated-text-container">
+                <p id="translated-text"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
